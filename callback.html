@@ -1,0 +1,10 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><link rel="icon" href="logo.png"><link rel="stylesheet" href="style.css"><title>로그인 연결 · 테크까봄</title></head>
+<body><main><header><img src="logo.png" alt="테크까봄 로고"><a href="./">테크까봄 TechKkabom</a></header>
+<div class="card"><h1 id="t">로그인 연결 중…</h1><p class="muted" id="m">TechKkabom Uploader 로 돌아가는 중입니다. Returning to TechKkabom Uploader…</p></div>
+<script>
+// 플랫폼 로그인 뒤 돌아오는 곳. 받은 1회용 코드를 운영자 컴퓨터의 업로더(127.0.0.1)로 넘긴다.
+var q = location.search;
+if (/[?&](code|error)=/.test(q)) { location.replace('http://127.0.0.1:53682/callback' + q); }
+else { document.getElementById('t').textContent = '연결할 내용이 없어요'; document.getElementById('m').textContent = 'Nothing to connect.'; }
+</script>
+</main></body></html>
